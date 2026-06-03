@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag danicor/webserver
     - name: push the image to DockerHub
-      run: docker login -u danicor ${{ secrets.DOCKER_TOKEN}} && docker push danicor/webserver
+      run: docker login -u danicor -p ${{ secrets.DOCKER_TOKEN}} && docker push danicor/webserver
